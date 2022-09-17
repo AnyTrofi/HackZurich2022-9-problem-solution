@@ -16,22 +16,34 @@ BackEnd Part:
 Work with backend:
 
 Registration:
+
   data = {'user_name': '###', 'user_password': '###', 'user_email': '###', 'user_adress': '###'}
+  
   requests.post('http://127.0.0.1:5000/reg', json=data).text 
+  
   If everything went well, will return id, else -1
   
 Login:
+
   data = {'user_name': '###', 'user_password': '###', 'user_email': '###'}
+  
   requests.post('http://127.0.0.1:5000/log', json=data).text 
+  
   If everything went well, will return id, else -1
  
 Get statistic:
+  
   data = {'user_id': ###}
+  
   requests.post('http://127.0.0.1:5000/stat', json=data).text 
+  
   return [] or full statistics
   
 Add data:
+  
   data = {'user_id': ###, 'date': ###, 'value': ###}
+  
   requests.post('http://127.0.0.1:5000/add', json=data).text 
+  
   return 'wrong' or 'success'
  
